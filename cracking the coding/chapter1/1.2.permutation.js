@@ -36,5 +36,39 @@ function perm(s1, s2) {
     return false;
   }
 
-  
+  var lets = {};
+  count = 0;
+
+  for(var i = 0; i < s1.length; i++){
+    if(!lets[s1[i]]){
+      //forgot to initialize letter
+      //REMEMBER CAN ASSIGN NUMS WITH +/-
+      lets[s1[i]] = 0;
+      lets[s1[i]] += 1;
+      console.log("first for loop: ");
+      console.log(lets);
+
+    }
+  }
+
+  for(var j = 0; j < s2.length; j++){
+    if(lets[s2[j]]){
+      lets[s2[j]] -= 1;
+      console.log("second for loop: ")
+      console.log(lets);
+    }
+  }
+
+  for(var z in lets){
+    if(lets[z] !== 0){
+      return false;
+    }
+  }
+  return true;
 }
+
+
+perm("dog", "god"); // true
+perm("dog", "gdo"); // true
+perm("dog", "odg"); // true
+perm("dog", "ogg"); // false
