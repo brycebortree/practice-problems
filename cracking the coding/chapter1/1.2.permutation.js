@@ -30,6 +30,7 @@ subset("hahahaha", "ha");
 
 //OK REALIZED I DIDN'T KNOW WHAT PERMUTATIONS WERE
 //May have created subset algorithm instead???
+//below is optimized from a blog
 
 function perm(s1, s2) {
   if (s1.length !== s2.length) {
