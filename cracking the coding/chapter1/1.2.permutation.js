@@ -55,8 +55,6 @@ function perm(s1, s2) {
   for(var j = 0; j < s2.length; j++){
     if(lets[s2[j]]){
       lets[s2[j]] -= 1;
-      console.log("second for loop: ")
-      console.log(lets);
     }
   }
 
