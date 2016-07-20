@@ -13,10 +13,8 @@ function subset(s1, s2) {
       lets[s1[i]] = true;
     }
   }
-  console.log("lets: ", lets);
 
   for(var j = 0; j < s2.length; j++){
-    console.log("j: ", s2[j]);
     //really struggled with this lower line:
     //only return FALSE if the letter ISN'T in the object
     if(!lets[s2[j]]){
@@ -46,9 +44,6 @@ function perm(s1, s2) {
       //REMEMBER CAN ASSIGN NUMS WITH +/-
       lets[s1[i]] = 0;
       lets[s1[i]] += 1;
-      console.log("first for loop: ");
-      console.log(lets);
-
     }
   }
 
