@@ -5,4 +5,5 @@ function fib(num){
   return fib(num-2) + fib(num-1);
   }
 }
-fib(7)
+
+fib(7);
