@@ -3,7 +3,7 @@
 // your method should return the original string. Assume upper and lowercase letters only.
 
 function comp(str){
-  var lets = {};
+  // var lets = {};
   var res = '';
   //didn't start count @ 1
   var count = 1;
