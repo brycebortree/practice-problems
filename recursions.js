@@ -33,3 +33,28 @@
 
 // adder([1, 2, 3, 4, 5, 6]);
 
+// function fibonacci(num){
+//   if(num === 0 || num === 1){
+//     return 1;
+//   }
+
+//   return fibonacci(num-1) + fibonacci(num-2);
+// }
+
+// fibonacci(7);
+
+// function multiply(a, b){
+//   if(b === 1){
+//     return a;
+//   }
+//   console.log(b);
+//   return a + multiply(a, b-1);
+// }
+
+// multiply(10, 9);
+
+function reverseStr(str){
+
+}
+
+reverseStr("Bryce");
