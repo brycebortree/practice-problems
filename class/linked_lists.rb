@@ -15,7 +15,6 @@ class Node
   end
 end
 
-
 class LinkedList
   attr_accessor :head, :tail
 
@@ -44,8 +43,6 @@ class LinkedList
 end
 
 
-
-
 # # p1 Add a node in the second place
 
 # p1list = LinkedList.new
@@ -61,11 +58,6 @@ end
 
 # puts p1list
 
-
-
-
-
-
 # p2 Add a node to the end
 
 # p2list = LinkedList.new
@@ -79,10 +71,6 @@ end
 
 # p2list.insert_end 7
 # puts p2list
-
-
-
-
 
 
 #p3 Add a node second to the end
@@ -152,15 +140,15 @@ end
 # p6list.insert_end 17
 # p6list.insert_end 8
 
-puts p6list
+# puts p6list
 
-s1 = Node.new 23
-s2 = Node.new 17
-s3 = Node.new 8
+# s1 = Node.new 23
+# s2 = Node.new 17
+# s3 = Node.new 8
 
 
 
-puts p6list
+# puts p6list
 
 # DIDN'T GET
 
