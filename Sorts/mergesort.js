@@ -39,7 +39,7 @@ function mergeArrays(arr, startLeft, stopLeft, startRight, stopRight){
     k++;
   }
 
-  rightArr[rightArr.legnth - 1] = Infinity; //sentinenl
+  rightArr[rightArr.length - 1] = Infinity; //sentinenl
   leftArr[leftArr.length - 1] = Infinity;
   var m = 0;
   var n = 0;
