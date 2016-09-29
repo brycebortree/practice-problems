@@ -4,6 +4,8 @@ function Node(data, left, right){
   this.left = left;
   this.right = right;
   this.show = show;
+  //count occurences
+  this.count = 1;
 }
 
 // show function
@@ -15,6 +17,10 @@ function BST(){
   this.root = null
   this.insert = insert;
   this.inOrder = inOrder;
+  this.preOrder = preOrder;
+  this.postOrder = postOrder;
+  //add update
+  this.update = update;
 }
 // insert function
 function insert(data){
@@ -111,4 +117,66 @@ function find(data){
   }
   //return current
   return current;
+}
+
+//remove a node
+function remove(data){
+  root = removeNode(this.root, data);
+}
+
+//removeNode
+function removeNode(node, data){
+  if(node === null){
+    return null;
+  }
+  if(data === node.data){
+    //node has no children
+    if(node.left === null && node.right === null){
+      return null;
+    }
+    // node has no left child
+    if(node.left === null){
+      return node.right;
+    }
+    //node has no right child
+    if(node.right === null){
+      return node.left;
+    }
+    var tempNode = getSmallest(node.right);
+    node.data = tempNode.data;
+    node.right = removeNode(node.right, tempNode.data);
+    return node;
+  } else if (data < node.data){
+    node.left = removeNode(node.left, data);
+    return node;
+  } else {
+    node.right = removeNode(node.right, data);
+    return node;
+  }
+}
+
+//update when count field needs to be incremented
+function update(data){
+  var grade = this.find(data);
+  grade.count++;
+  return grade;
+}
+
+//display grades
+function prArray(arr){
+  putstr(arr[0].toString() + ' ');
+  for(var i = 1; i < arr.length; i++){
+    putstr(arr[i].toString() + ' ');
+    if(i % 10 === 0){
+      putstr("\n");
+    }
+  }
+}
+
+function genArray(length){
+  var arr = [];
+  for(var i = 0; i < length; i++){
+    arr[i] = Math.floor(Math.random() * 101);
+    return arr;
+  }
 }
