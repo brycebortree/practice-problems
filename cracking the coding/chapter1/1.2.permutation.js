@@ -66,3 +66,24 @@ perm("dog", "god"); // true
 perm("dog", "gdo"); // true
 perm("dog", "odg"); // true
 perm("dog", "ogg"); // false
+
+//new one w/ sort
+function perm(str1, str2){
+  str1 = useable(str1);
+  str2 = useable(str2);
+  
+  return str1 === str2;
+}
+
+function useable(str){
+  str = str.toLowerCase();
+  str = str.split(" ");
+  str = str.join("");
+  str = str.split("")
+  str = str.sort();
+  str = str.join("");
+  return str;
+}
+
+perm("Hello", "ohell     ");
+// perm("Bye", "byeeeeee");
