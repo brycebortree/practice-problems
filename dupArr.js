@@ -16,4 +16,4 @@ function removeDup(arr){
 
 removeDup([1, 1, 2, 3]);
 
-O of N
+// O of N
