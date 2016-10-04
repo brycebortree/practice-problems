@@ -70,14 +70,22 @@ LinkedList.prototype.partition = function(num){
       before = new LinkedList(),
       after = new LinkedList();
 
-  while(curr.next){
+  while(curr){
     if(curr.data < num){
       before.insert(curr);
     } else {
       after.insert(curr);
     }
+    curr = curr.next;
   }
-  return after;
+
+  var aftHead = after.head;
+  while(aftHead){
+    before.insert(aftHead.data);
+    aftHead = aftHead.next;
+  }
+
+  return before;
 }
 
 var count = new LinkedList();
