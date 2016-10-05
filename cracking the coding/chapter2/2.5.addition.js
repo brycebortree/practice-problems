@@ -65,8 +65,11 @@ LinkedList.prototype.find = function(data){
 
 LinkedList.prototype.addition = function(list1, list2){
   var ans = new LinkedList(),
-      num1,
-      num2;
+      carry,
+      num;
+
+  
+
 
   
 
