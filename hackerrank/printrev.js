@@ -1,9 +1,9 @@
 //simple for loop print
 
 function printrev(n){
-  var ans = '';
+  var ans = [];
   for(var i = n; i > 0; i--){
-    ans += i + " ";
+    ans.push(i);
   }
   return ans;
 }
